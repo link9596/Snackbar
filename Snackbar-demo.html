@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name= "viewport" content= "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Snackbar</title>
+</head>
+<style>
+.md-btn {
+  position: relative;
+  display: inline-block;
+  min-width: 88px;
+  height: 36px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 16px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: all .2s cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+          transition: all .2s cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+          transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+          transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+
+  will-change: box-shadow;
+  -webkit-user-drag: none;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.md-btn:hover {
+  background-color: rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+          box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .3s, opacity 1s;
+}
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .2;
+  transition: 0s;
+}
+</style>
+
+<body>
+
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="showSnackbar(snacktext='Snackbar1')">Show Snackbar1</button>
+
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="showSnackbar(snacktext='Snackbartext')">Show Snackbar2</button>
+
+<div id="snackbar"></div>
+<link rel=stylesheet href="css/Snackbar-M1.css">
+<script src="js/Snackbar-M1.js"></script>
+</body>
+</html>

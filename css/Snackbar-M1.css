@@ -1,5 +1,5 @@
     #snackbar {
-      line-height: 16px;
+      line-height: 25px;
       font-size: 14px;
       visibility: hidden;
       width: 100%;
@@ -22,9 +22,11 @@
 
 @media (min-width: 767px) {
 #snackbar {
-width: 250px;
+line-height: 20px;
+width: 288px;
 border-radius: 3px;
 left: 2%;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 1.25px 5px 0px, rgba(0, 0, 0, 0.04) 0px 0.3333px 1.5px 0px;
  }
 
     #snackbar.show {

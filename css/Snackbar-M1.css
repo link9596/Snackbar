@@ -1,45 +1,90 @@
-    #snackbar {
-      line-height: 25px;
-      font-size: 14px;
-      visibility: hidden;
-      width: 100%;
-      margin-left: 0px;
-      background-color: #333;
-      color: #fff;
-      text-align: left;
-      border-radius: 0px;
-      padding: 16px;
-      position: fixed;
-      box-sizing: border-box;
-      z-index: 1;
-      left: 0%;
-      bottom: -50px;
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s linear;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-@media (min-width: 767px) {
 #snackbar {
-line-height: 20px;
-width: 288px;
-border-radius: 3px;
-left: 2%;
-box-shadow: rgba(0, 0, 0, 0.19) 0px 1.25px 5px 0px, rgba(0, 0, 0, 0.04) 0px 0.3333px 1.5px 0px;
- }
-
-    #snackbar.show {
-      margin-bottom: 20px;
-    }
+  display: none;
+  line-height: 20px;
+  font-size: 14px;
+  width: 100%;
+  margin-left: -8px;
+  background-color: #333;
+  color: #333;
+  text-align: left;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 1.25px 5px 0px, rgba(0, 0, 0, 0.04) 0px 0.3333px 1.5px 0px;
+  transition: 0.38s cubic-bezier(0.36, 0.12, 0.18, 0.46);
+  -webkit-transition: 0.38s cubic-bezier(0.36, 0.12, 0.18, 0.46);
 }
 
-    #snackbar.show {
-      visibility: visible;
-      opacity: 1;
-      bottom: 0px;
-    }
+#CloseButton{
+color: #fff;
+right:16px;
+position: absolute;
+margin-left:48px;
+height: 36px;
+max-width: 48px;
+text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
 
-    #snackbar.hide {
-      bottom: -60px;
-    }
+#snackbar.show {
+  -webkit-animation: fadein .4s cubic-bezier(0.2, 0, 0, 1);
+  animation: fadein .4s cubic-bezier(0.2, 0, 0, 1);
+  color: #fff;
+}
+@media (min-width:767px) {
+  #snackbar {
+    width: 288px;
+    border-radius: .25rem;
+    left: 30px;
+  }
+  #snackbar.show {
+    bottom: 20px;
+  -webkit-animation: fadein .4s cubic-bezier(0.2, 0, 0, 1);
+  animation: fadein .4s cubic-bezier(0.2, 0, 0, 1);
+}
+}
+#snackbar.hide {
+  -webkit-animation: fadeout .5s cubic-bezier(0.2, 0, 0, 1);
+  animation: fadeout .5s cubic-bezier(0.2, 0, 0, 1);
+}
+@-webkit-keyframes fadein {
+  0% {
+    transform: translate(0, 72px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+}
+@keyframes fadein {
+0% {
+  transform: translate(0, 72px);
+}
+100% {
+  transform: translate(0, 0);
+}
+}
+@-webkit-keyframes fadeout {
+0% {
+  transform: translate(0, 0px);
+}
+100% {
+  transform: translate(0, 72px);
+}
+}
+@keyframes fadeout {
+0% {
+  transform: translate(0, 0px);
+}
+100% {
+  transform: translate(0, 72px);
+}
+}

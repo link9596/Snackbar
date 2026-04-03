@@ -3,6 +3,8 @@ A web component about Material Design Snackbar. 一个网页Snackbar小组件。
 
 Only 5Kb!!!
 
+Language：简体中文 | [English](README-en.md)
+
 ## 使用说明
 
 在 HTML 中通过 <script src=".../snackbar.js"></script> 引入。

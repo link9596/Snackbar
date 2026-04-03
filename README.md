@@ -1,6 +1,8 @@
 # Snackbar
 A web component about Material Design Snackbar. 一个网页Snackbar小组件。
 
+Only 5Kb!!!
+
 ## 使用说明
 
 在 HTML 中通过 <script src=".../snackbar.js"></script> 引入。

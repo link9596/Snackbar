@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Snackbar</title>
 </head>
+
 <style>
 .md-btn {
   position: relative;
@@ -84,12 +85,15 @@
 
 <body>
 
-<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="showSnackbar(snacktext='Snackbar1')">Show Snackbar1</button>
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="snackbar.show({ message: 'Classic Notification', duration: 3000 })">Classic Notification</button>
 
-<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="showSnackbar(snacktext='Snackbartext')">Show Snackbar2</button>
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="snackbar.show({ message: 'Notification', actionText: 'Cancel', actionHandler: () => { alert('Canceled'); } })">With interactive button</button>
 
-<div id="snackbar"></div>
-<link rel=stylesheet href="css/Snackbar-M1.css">
-<script src="js/Snackbar-M1.js"></script>
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="snackbar.show({ message: 'A long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long text', duration: 8000 })">Long Text</button>
+
+<button style="margin:8px;background-color:#66BB6A;color:#fff" class="md-btn ripple" onclick="snackbar.show({ message: 'You must interact with a persistent notification', duration: 0, actionText: 'OK', actionHandler: () => {  } })">Permanent Snackbar</button>
+
+<script src="snackbar.js"></script>
+
 </body>
 </html>

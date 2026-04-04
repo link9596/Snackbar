@@ -10,13 +10,12 @@ HTML: ```<script src=".../snackbar.js"></script>```
 
 ## Parameters
 
-message (string)：Required. The text of the snackbar message.
-
-actionText (string)：Optional. The text of the action button.
-
-actionHandler (function)：Optional. The callback function when the action button is clicked.
-
-duration (number)：Auto-dismiss delay (milliseconds). Default is 3500. Set to 0 for persistent snackbar (must be dismissed by user interaction).
+| Parameter | Describe |
+| ---- | ---- |
+| message (string) | Required. The text of the snackbar message.|
+| actionText (string) | Optional. The text of the action button.|
+| actionHandler (function) | Optional. The callback function when the action button is clicked.|
+| duration (number) | Auto-dismiss delay (milliseconds). Default is 3500. Set to 0 for persistent snackbar (must be dismissed by user interaction).|
 
 ## Usage
 

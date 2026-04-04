@@ -11,13 +11,12 @@ Language：简体中文 | [English](README-en.md)
 
 ## 参数说明：
 
-message (string)：必填，提示文本
-
-actionText (string)：可选，按钮文字
-
-actionHandler (function)：可选，按钮点击的回调函数
-
-duration (number)：自动收回延迟（毫秒），默认 3500，设为 0 则不自动关闭（常驻通知，必须通过交互等方式关闭）
+| 参数 | 说明 |
+| ---- | ---- |
+| message (string) | 必填，提示文本 |
+| actionText (string) | 可选，按钮文字 |
+| actionHandler (function) | 可选，按钮点击的回调函数 |
+| duration (number) | 自动收回延迟（毫秒），默认 3500，设为 0 则不自动关闭（常驻通知，必须通过交互等方式关闭） |
 
 ## 调用方式：
 

@@ -20,8 +20,8 @@ Language：简体中文 | [English](README-en.md)
 
 ## 调用方式：
 
-基础消息：snackbar.show({ message: '操作成功', duration: 3000 })
-
-带操作按钮：snackbar.show({ message: '已删除', actionText: '撤销', actionHandler: () => { ```这里写回调函数``` } })
-
-快捷调用：snackbar.info('纯文本消息') 或 snackbar.action('消息', '按钮', callback)
+| 参数 | 说明 |
+| ---- | ---- |
+| 基础消息 | snackbar.show({ message: '操作成功', duration: 3000 }) |
+| 带操作按钮 |snackbar.show({ message: '已删除', actionText: '撤销', actionHandler: () => { ```这里写回调函数``` } })|
+| 快捷调用 |snackbar.info('纯文本消息') 或 snackbar.action('消息', '按钮', callback) |

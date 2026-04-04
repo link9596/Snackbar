@@ -23,4 +23,4 @@ Basic message: ```snackbar.show({ message: 'Succeed', duration: 3000 })```
 
 With action button: ```snackbar.show({ message: 'Deleted', actionText: 'Undo', actionHandler: () => { callback function } })```
 
-Shortcuts: ```snackbar.info('Plain text message') or snackbar.action('Message', 'Button', callback)```
+Shortcuts: ```snackbar.info('Plain text message') ```or``` snackbar.action('Message', 'ButtonText', callback)```

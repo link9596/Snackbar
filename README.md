@@ -3,6 +3,8 @@ A web component about Material Design Snackbar. 一个网页Snackbar小组件。
 
 Only 5Kb!!!
 
+[Demo](https://codepen.io/link9596/pen/myrKjdg)
+
 Language：简体中文 | [English](README-en.md)
 
 ## 使用说明
